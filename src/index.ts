@@ -55,12 +55,12 @@ export default class Chaining <D = any, P = any> {
   /**
    * @returns current stored data
    */
-  protected get data() { return this.ctx.data; }
+  protected get data() { return this.ctx.data }
 
   /**
    * @returns parameters
    */
-  protected get params() { return this.ctx.params; }
+  protected get params() { return this.ctx.params }
 
   /**
    * Tells to execute chained methods in parallel (default is FIFO order)
@@ -74,8 +74,8 @@ export default class Chaining <D = any, P = any> {
    * write like: return this.queue(async () => ...). Could be both synchronous or asynchronous
    */
   protected queue(fn: WorkerFn) {
-    this.ctx.tasks.push(fn);
-    return this;
+    this.ctx.tasks.push(fn)
+    return this
   }
 
   /**
@@ -91,11 +91,11 @@ export default class Chaining <D = any, P = any> {
     } else {
       while(this.ctx.tasks.length) {
         // We expect functon to be defined, otherwise it should be a runtime error
-        const next = this.ctx.tasks.shift() as WorkerFn;
-        await next();
+        const next = this.ctx.tasks.shift() as WorkerFn
+        await next()
       }
     }
 
-    return this.data;
+    return this.data
   }
 }
