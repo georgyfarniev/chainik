@@ -2,11 +2,10 @@ import Chaining from '.'
 
 const delay = (t: number) => new Promise(r => setTimeout(r, t))
 
-class Chainable extends Chaining<string[], { foo: string } > {
-  constructor(data: string[], params: { foo: string }) {
-    super(data, params)
-  }
+type Data = string[]
+type Params = { foo: string }
 
+class Chainable extends Chaining<Data, Params> {
   step1(d: number) {
     console.log('queued step1')
     return this.queue(async () => {

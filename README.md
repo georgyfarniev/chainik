@@ -1,5 +1,14 @@
 # promise-chain
 
+<a href="https://www.npmjs.com/package/promise-chain" alt="Downloads">
+  <img src="https://img.shields.io/npm/dm/promise-chain" />
+</a>
+
+<a href="https://www.npmjs.com/package/promise-chain">
+  <img src="https://img.shields.io/npm/v/promise-chain" />
+</a>
+
+## Motivation
 Simple helper for building async chainable classes without external dependencies
 
 ## Features
@@ -20,11 +29,10 @@ import Chaining from 'promise-chain'
 
 const delay = (t: number) => new Promise(r => setTimeout(r, t))
 
-class Chainable extends Chaining<string[], { foo: string } > {
-  constructor(data: string[], params: { foo: string }) {
-    super(data, params)
-  }
+type Data = string[]
+type Params = { foo: string }
 
+class Chainable extends Chaining<Data, Params> {
   step1(d: number) {
     console.log('queued step1')
     return this.queue(async () => {
