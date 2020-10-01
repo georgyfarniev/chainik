@@ -1,5 +1,5 @@
 {
-  "name": "promise-chain",
+  "name": "chainik",
   "version": "1.0.0",
   "description": "Simple helper for building async chainable classes without external dependencies",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/georgyfarniev/promise-chain.git"
+    "url": "git+https://github.com/georgyfarniev/chainik.git"
   },
   "files": [
     "dist/*.js"
@@ -27,9 +27,9 @@
   "author": "Georgy Farniev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/georgyfarniev/promise-chain/issues"
+    "url": "https://github.com/georgyfarniev/chainik/issues"
   },
-  "homepage": "https://github.com/georgyfarniev/promise-chain#readme",
+  "homepage": "https://github.com/georgyfarniev/chainik#readme",
   "devDependencies": {
     "jest": "^26.4.2",
     "typescript": "^4.0.3",

@@ -1,15 +1,19 @@
-# promise-chain
+# chainik
 
-<a href="https://www.npmjs.com/package/promise-chain" alt="Downloads">
-  <img src="https://img.shields.io/npm/dm/promise-chain" />
+<a href="https://www.npmjs.com/package/chainik" alt="Downloads">
+  <img src="https://img.shields.io/npm/dm/chainik" />
 </a>
 
-<a href="https://www.npmjs.com/package/promise-chain">
-  <img src="https://img.shields.io/npm/v/promise-chain" />
+<a href="https://www.npmjs.com/package/chainik">
+  <img src="https://img.shields.io/npm/v/chainik" />
 </a>
 
 ## Motivation
 Simple helper for building async chainable classes without external dependencies
+
+**Chainik** means **teapot** in Russian. I took this name because it associated with chains and
+**cantik**, which means **beautiful** in Indonesian and some other languages. Also, other names
+containing **chain** word and suitable for this module was occupied in NPM.
 
 ## Features
  - Typescript types out of the box
@@ -19,20 +23,20 @@ Simple helper for building async chainable classes without external dependencies
  
 ## Installation
 ```shell
-npm i -g promise-chain
+npm i -g chainik
 ```
 
 ## For usage, see example below (more examples and documentation coming soon!):
 
 ```ts
-import Chaining from 'promise-chain'
+import Chainik from 'chainik'
 
 const delay = (t: number) => new Promise(r => setTimeout(r, t))
 
 type Data = string[]
 type Params = { foo: string }
 
-class Chainable extends Chaining<Data, Params> {
+class Chainable extends Chainik<Data, Params> {
   step1(d: number) {
     console.log('queued step1')
     return this.queue(async () => {

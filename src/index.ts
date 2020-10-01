@@ -33,7 +33,7 @@ interface Context <D, P> {
 /**
  * Helper for implementing async chainable classes
  */
-export default class Chaining <D = any, P = any> {
+export default class Chainik <D = any, P = any> {
   private readonly ctx: Context<D, P>
 
   /**

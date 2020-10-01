@@ -37,6 +37,7 @@ class Chainable extends Chaining<Data, Params> {
 async function main() {
   console.log('started')
 
+  // first parameter is accumulator (as for Array.reduce()), second is optional context params
   const chain = new Chainable([], { foo: 'bar' })
   const data = await chain.step1(1000).step2(2000).step3().exec()
 
